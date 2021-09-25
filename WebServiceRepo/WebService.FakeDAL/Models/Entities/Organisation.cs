@@ -10,7 +10,7 @@ namespace WebService.FakeDAL.Models.Entities
     /// <summary>
     /// Модель организации
     /// </summary>
-    public class Organisation : Interfaces.IOrganisation
+    public class Organisation : IOrganisation
     {
         private string _name;
         private long _taxId;
