@@ -1,0 +1,21 @@
+﻿@*@using WebService.Models
+@using WebService.Models.Interfaces*@
+
+@model IEnumerable<WebService.Models.Entities.Organisation>
+@{
+    ViewBag.Title = "Organisations";
+}
+
+@section Scripts {
+
+}
+
+@section Body {
+    <div id="summary" class="section panel panel-primary">
+        @Html.Partial("Summary", Model)
+    </div>
+    <div id="editor" class="section panel panel-primary">
+        @Html.Partial("Editor", new WebService.Models.Entities.Organisation())
+    </div>
+}
+

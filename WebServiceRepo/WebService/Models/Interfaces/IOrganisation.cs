@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebService.FakeDAL.Models.Interfaces
+namespace WebService.Models.Interfaces
 {
     /// <summary>
     /// Контракт на описание организации
@@ -18,10 +18,10 @@ namespace WebService.FakeDAL.Models.Interfaces
         /// <summary>
         /// ИНН
         /// </summary>
-        long TaxId { get; set; }
+        string TaxId { get; set; }
         /// <summary>
         /// КПП
         /// </summary>
-        long RegistrationReasonCode { get; set; }
+        string RegistrationReasonCode { get; set; }
     }
 }

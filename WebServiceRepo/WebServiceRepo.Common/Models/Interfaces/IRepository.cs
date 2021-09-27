@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebService.FakeDAL.Models.Interfaces;
 
-namespace WebService.FakeDAL.Repository.Interfaces
+namespace WebServiceRepo.Common.Models.Interfaces
 {
     public interface IRepository<T>
-        where T : IOrganisation
+        where T : Organisation
     {
         void Create(T organisation);
-        T Read(int taxId);
+        T Read(string taxId);
         void Update(T organisation);
-        void Delete(T organisation);
-        
+        void Delete(string taxId);
+
         IEnumerable<T> GetAll();
     }
 }

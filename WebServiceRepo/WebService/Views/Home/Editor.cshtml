@@ -1,0 +1,26 @@
+﻿@model WebService.Models.Entities.Organisation
+
+@{
+    ViewBag.Title = "Editor";
+}
+
+<div class="panel-heading">Add an organisation</div>
+<div class="panel-body">
+    @using (Html.BeginForm("Add", "Home"))
+    {
+        <div class="form-group">
+            <label>Name</label>
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Tax Id</label>
+            @Html.TextBoxFor(m => m.TaxId, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Reason Number</label>
+            @Html.TextBoxFor(m => m.RegistrationReasonCode, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+</div>
+
